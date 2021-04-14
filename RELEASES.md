@@ -60,7 +60,7 @@ Cargo
 
 Rustdoc
 -------
-- [Rustdoc lints are now treated as a lint tool, meaning that
+- [Rustdoc lints are now treated as a tool lint, meaning that
   lints are now prefixed with `rustdoc::` (e.g. `#[warn(rustdoc::non_autolinks)]`).][80527]
 - [Rustdoc now supports argument files.][82261]
 - [Rustdoc now generates smart punctuation for documentation.][79423]
