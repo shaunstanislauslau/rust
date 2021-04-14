@@ -56,7 +56,7 @@ The following previously stable APIs are now `const`.
 
 Cargo
 -----------------------
-- [Allow `cargo update` to operate with the --offline flag][cargo/9279]
+- [`cargo update` now works with the `--offline` flag.][cargo/9279]
 
 Rustdoc
 -------
