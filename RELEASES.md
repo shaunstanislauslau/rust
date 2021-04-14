@@ -6,7 +6,7 @@ Language
 - [Added the `unsafe_op_in_unsafe_fn` lint, which checks whether the unsafe code
   in an `unsafe fn` is wrapped in a `unsafe` block.][79208] By default this lint
   is allow by default, and may become a warning or hard error in a
-  future release.
+  future edition.
 - [You can now cast mutable references to arrays to a pointer of the same type as
   the element.][81479]
 
