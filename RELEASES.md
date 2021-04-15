@@ -4,8 +4,8 @@ Version 1.52.0 (2021-04-29)
 Language
 --------
 - [Added the `unsafe_op_in_unsafe_fn` lint, which checks whether the unsafe code
-  in an `unsafe fn` is wrapped in a `unsafe` block.][79208] By default this lint
-  is allow by default, and may become a warning or hard error in a
+  in an `unsafe fn` is wrapped in a `unsafe` block.][79208] This lint
+  is allowed by default, and may become a warning or hard error in a
   future edition.
 - [You can now cast mutable references to arrays to a pointer of the same type as
   the element.][81479]
@@ -19,6 +19,9 @@ Added tier 3\* support for the following targets.
 - [`s390x-unknown-linux-musl`][82166]
 - [`riscv32gc-unknown-linux-musl` & `riscv64gc-unknown-linux-musl`][82202]
 - [`powerpc-unknown-openbsd`][82733]
+
+\* Refer to Rust's [platform support page][platform-support-doc] for more
+information on Rust's tiered platform support.
 
 Libraries
 ---------
@@ -79,6 +82,10 @@ Misc
 
 Internal Only
 -------------
+These changes provide no direct user facing benefits, but represent significant
+improvements to the internals and overall performance of rustc and
+related tools.
+
 - [Check the result cache before the DepGraph when ensuring queries][81855]
 - [Try fast_reject::simplify_type in coherence before doing full check][81744]
 - [Only store a LocalDefId in some HIR nodes][81611]
