@@ -59,12 +59,15 @@ The following previously stable APIs are now `const`.
 
 Cargo
 -----------------------
-- [`cargo update` now works with the `--offline` flag.][cargo/9279]
+- [Cargo now works with git dependencies that have a default
+  branch not named `master`.][cargo/9133]
 
 Rustdoc
 -------
 - [Rustdoc lints are now treated as a tool lint, meaning that
   lints are now prefixed with `rustdoc::` (e.g. `#[warn(rustdoc::non_autolinks)]`).][80527]
+  Using the old style is still allowed, and will become a warning in
+  a future release.
 - [Rustdoc now supports argument files.][82261]
 - [Rustdoc now generates smart punctuation for documentation.][79423]
 - [You can now use "task lists" in Rustdoc Markdown.][81766] E.g.
@@ -93,10 +96,12 @@ related tools.
 
 Compatibility Notes
 -------------------
+- [Cargo build scripts are now forbidden from setting `RUSTC_BOOTSTRAP`.][cargo/9181]
 - [Removed support for the `x86_64-rumprun-netbsd` target.][82594]
 - [Deprecated the `x86_64-sun-solaris` target in favor of `x86_64-pc-solaris`.][82216]
 - [Rustdoc now only accepts `,`, ` `, and `\t` as delimiters for specifying
   languages in code blocks.][78429]
+
 
 [82166]: https://github.com/rust-lang/rust/pull/82166
 [82121]: https://github.com/rust-lang/rust/pull/82121
@@ -121,7 +126,8 @@ Compatibility Notes
 [78429]: https://github.com/rust-lang/rust/pull/78429
 [82733]: https://github.com/rust-lang/rust/pull/82733
 [82594]: https://github.com/rust-lang/rust/pull/82594
-[cargo/9279]: https://github.com/rust-lang/cargo/pull/9279
+[cargo/9133]: https://github.com/rust-lang/cargo/pull/9133
+[cargo/9181]: https://github.com/rust-lang/cargo/pull/9181
 [`char::MAX`]: https://doc.rust-lang.org/std/primitive.char.html#associatedconstant.MAX
 [`char::REPLACEMENT_CHARACTER`]: https://doc.rust-lang.org/std/primitive.char.html#associatedconstant.REPLACEMENT_CHARACTER
 [`char::UNICODE_VERSION`]: https://doc.rust-lang.org/std/primitive.char.html#associatedconstant.UNICODE_VERSION
