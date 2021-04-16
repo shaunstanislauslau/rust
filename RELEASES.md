@@ -28,7 +28,7 @@ Libraries
 - [`OsString` now implements `Extend` and `FromIterator`.][82121]
 - [`cmp::Reverse` now has `#[repr(transparent)]` representation.][81879]
 - [`Arc<impl Error>` now implements `error::Error`.][80553]
-- [All stable methods on integers are now `const`.][80962]
+- [All integer division and remainder operations are now `const`.][80962]
 
 Stabilised APIs
 -------------
